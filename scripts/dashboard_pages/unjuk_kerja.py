@@ -661,7 +661,7 @@ def show_unjuk_kerja_page(df, selected_block, selected_week, selected_category):
     render_clean_table(weekly_summary_fmt)
 
     # 🔥 DETAIL TABLE (EXPANDER)
-    with st.expander("📊 Tabel Detail (Harian & Performance)", expanded=False):
+    with st.expander("📊 Tabel Detail (Harian & Performance)", expanded=True):
         col_tab1, col_tab2 = st.columns(2)
         with col_tab1:
             st.markdown("##### Tabel Harian (Hour Meter)")

@@ -474,7 +474,7 @@ def show_ewh_page(df, selected_block, selected_week, selected_category):
     
     render_clean_table(weekly_summary_fmt)
 
-    with st.expander("📊 Tabel Detail Harian EWH", expanded=False):
+    with st.expander("📊 Tabel Detail Harian EWH", expanded=True):
         pivot_plan = df_filtered.pivot_table(index=["category", "unit_type", "no_lambung"], columns="date", values="ewh_plan", aggfunc="mean", observed=True)
         pivot_actual = df_filtered.pivot_table(index=["category", "unit_type", "no_lambung"], columns="date", values="ewh_actual", aggfunc="mean", observed=True)
 
@@ -529,7 +529,7 @@ def show_ewh_page(df, selected_block, selected_week, selected_category):
     # ==========================================
     # IMPLEMENTASI LAZY RENDER: TREND EWH BLOCK
     # ==========================================
-    with st.expander("📈 Trend EWH", expanded=False):
+    with st.expander("📈 Trend EWH", expanded=True):
         st.markdown("## 📈 Trend EWH")
         trend_source = df_block.copy()
         

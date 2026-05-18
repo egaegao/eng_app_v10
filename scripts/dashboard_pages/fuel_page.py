@@ -809,7 +809,7 @@ def show_fuel_page(df, selected_block, selected_week):
     # DAILY FUEL RATIO (ALL CATEGORY) - WEEKLY BASIS
     # ============================================
     st.write("")
-    with st.expander("⚡ Daily Fuel Ratio Analysis", expanded=False):
+    with st.expander("⚡ Daily Fuel Ratio Analysis", expanded=True):
         st.markdown("### ⚡ Daily Fuel Ratio (Selected Week)")
 
         # Data for chart always uses df_now (Weekly)
@@ -873,7 +873,7 @@ def show_fuel_page(df, selected_block, selected_week):
     # DAILY FUEL CONSUMPTION (ALL CATEGORY)
     # ============================================
     st.write("")
-    with st.expander("⛽ Daily Fuel Consumption Analysis", expanded=False):
+    with st.expander("⛽ Daily Fuel Consumption Analysis", expanded=True):
         st.markdown("### ⛽ Daily Fuel Consumption (Selected Week)")
 
         df_fuel_weekly = df_now[df_now["metric"] == "fuel"].copy()
@@ -934,7 +934,7 @@ def show_fuel_page(df, selected_block, selected_week):
     # 📈 TREND ACTUAL VS PLAN
     # ============================================
     st.write("")
-    with st.expander("📈 Trend Analysis", expanded=False):
+    with st.expander("📈 Trend Analysis", expanded=True):
         st.markdown("### 📈 Trend Actual vs Plan")
         st.markdown("---")
 
@@ -978,7 +978,7 @@ def show_fuel_page(df, selected_block, selected_week):
     # 📊 SNAPSHOT WEEKLY
     # ============================================
     st.write("")
-    with st.expander("📊 Weekly Snapshot", expanded=False):
+    with st.expander("📊 Weekly Snapshot", expanded=True):
         st.markdown("### 📊 Weekly Snapshot (Aggregation)")
         st.markdown("---")
 
